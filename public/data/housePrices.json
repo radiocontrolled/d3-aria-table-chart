@@ -1,0 +1,87 @@
+{
+    "2017-01-10" : {
+        "All property types": -0.19,
+        "Detached houses": 0,
+        "Semi-detached houses": -0.25,
+        "Terraced houses": -0.54,
+        "Flats and maisonettes": 0.11
+    },
+    "2017-02-01" : {
+        "All property types": 0.26,
+        "Detached houses": 0.05,
+        "Semi-detached houses": 0.24,
+        "Terraced houses": 0.36,
+        "Flats and maisonettes": 0.38
+    },
+    "2017-03-01" : {
+        "All property types": -0.19,
+        "Detached houses": 0.32,
+        "Semi-detached houses": 0.08,
+        "Terraced houses": -0.43,
+        "Flats and maisonettes": -0.79
+    },
+    "2017-04-01" : {
+        "All property types": 1.5,
+        "Detached houses": 1.2,
+        "Semi-detached houses": 1.39,
+        "Terraced houses": 1.68,
+        "Flats and maisonettes": 1.71
+    },
+    "2017-05-01" : {
+        "All property types": 0.71,
+        "Detached houses": -0.25,
+        "Semi-detached houses": 1.03,
+        "Terraced houses": 0.64,
+        "Flats and maisonettes": 1.51
+
+    },
+    "2017-06-01" : {
+        "All property types": 0.92,
+        "Detached houses": 1.28,
+        "Semi-detached houses": 0.68,
+        "Terraced houses": 1.34,
+        "Flats and maisonettes": 0.2
+    },
+    "2017-07-01" : {
+        "All property types": 1.29,
+        "Detached houses": 1.4,
+        "Semi-detached houses": 1.2,
+        "Terraced houses": 1.17,
+        "Flats and maisonettes": 1.43
+    },
+    "2017-08-01" : {
+        "All property types": 0.31,
+        "Detached houses": 0.32,
+        "Semi-detached houses": 0.37,
+        "Terraced houses": 0.73,
+        "Flats and maisonettes": -0.35
+    },
+    "2017-09-01" : {
+        "All property types": 0.02,
+        "Detached houses": 0.65,
+        "Semi-detached houses": 0.01,
+        "Terraced houses": -0.44,
+        "Flats and maisonettes": -0.05
+    },
+    "2017-10-01" : {
+        "All property types": 0.34,
+        "Detached houses": 0.56,
+        "Semi-detached houses": 0.8,
+        "Terraced houses": 0.07,
+        "Flats and maisonettes": -0.14
+    }, 
+    "2017-11-01" : {
+        "All property types": -0.19,
+        "Detached houses": -0.74,
+        "Semi-detached houses": -0.16,
+        "Terraced houses": -0.26,
+        "Flats and maisonettes": 0.49
+    },
+    "2017-12-01" : {
+        "All property types": 0.36,
+        "Detached houses": 0.41,
+        "Semi-detached houses": 0.13,
+        "Terraced houses": 0.72,
+        "Flats and maisonettes": 0.11
+    }
+}
