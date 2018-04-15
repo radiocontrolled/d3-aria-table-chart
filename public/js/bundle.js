@@ -10221,7 +10221,7 @@ var Chart = function (_Canvas) {
   _createClass(Chart, [{
     key: 'drawLine',
     value: function drawLine(data, lineGenerator, className) {
-      var title = className.replace(/\-/g, " ");
+      var title = 'Per cent change, ' + className.replace(/\-/g, " ");
 
       this.table.append('g').attr('role', 'row') // g to append dots
       .attr('class', '' + className).append('g').attr('role', 'rowheader').append('path').attr('role', 'img').attr('transform', 'translate(0, ' + -this.margins.bottom + ')').data([data]).attr("d", lineGenerator).attr('class', 'line ' + className).append('title').text('' + title);
@@ -10229,22 +10229,28 @@ var Chart = function (_Canvas) {
   }, {
     key: 'drawLineData',
     value: function drawLineData(data, className) {
+      var _this2 = this;
+
       var parent = (0, _d3Selection.select)('.' + className);
       var formatter = (0, _d3TimeFormat.timeFormat)('%b');
 
-      parent.selectAll('.cell').data(data).enter().append('g').attr('role', 'cell').append('use').attr('class', className).attr('role', 'img').append('title').text(function (d) {
+      parent.selectAll('.cell').data(data).enter().append('g').attr('role', 'cell').append('circle').attr('r', 3).attr('cx', function (d) {
+        return _this2.xScale(d.date);
+      }).attr('cy', function (d) {
+        return _this2.yScale(d['all-property-types']);
+      }).attr('transform', 'translate(0, ' + -this.margins.bottom + ')').attr('class', className).attr('role', 'img').append('title').text(function (d) {
         return d['all-property-types'];
       });
     }
   }, {
     key: 'resizeLine',
     value: function resizeLine(el) {
-      var _this2 = this;
+      var _this3 = this;
 
       var lineGenerator = (0, _d3Shape.line)().x(function (d) {
-        return _this2.xScale(d.date);
+        return _this3.xScale(d.date);
       }).y(function (d) {
-        return _this2.yScale(d[el]);
+        return _this3.yScale(d[el]);
       });
 
       var path = 'path.line.' + el;
@@ -10254,7 +10260,7 @@ var Chart = function (_Canvas) {
   }, {
     key: 'resizeChartComponents',
     value: function resizeChartComponents() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.xScale.range([this.margins.left, this.width - this.margins.right]);
 
@@ -10263,15 +10269,15 @@ var Chart = function (_Canvas) {
       this.yScale.range([this.margins.bottom, this.height - this.margins.top]);
 
       var lineGenerator = (0, _d3Shape.line)().x(function (d) {
-        return _this3.xScale(d.date);
+        return _this4.xScale(d.date);
       }).y(function (d) {
-        return _this3.yScale(d[el]);
+        return _this4.yScale(d[el]);
       });
 
       (0, _d3Selection.select)('.y.axis').call(this.yAxis).attr('transform', 'translate(' + this.margins.left + ', ' + -this.margins.bottom + ')');
 
       _dataUtilities2.default.getCategoriesToVisualise(this.data, 'date').forEach(function (el) {
-        _this3.resizeLine(el);
+        _this4.resizeLine(el);
       });
     }
   }]);
