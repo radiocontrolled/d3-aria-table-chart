@@ -34,10 +34,10 @@ const processRawData = (data) => {
     arr.push({
       date: new Date(year, month, day),
       "all-property-types": data[i]["All property types"],
-      "detached-houses": data[i]["Detached houses"],
-      "semi-detached-houses": data[i]["Semi-detached houses"],
-      "terraced-houses": data[i]["Terraced houses"],
-      "flats-and-maisonettes": data[i]["Flats and maisonettes"]
+      // "detached-houses": data[i]["Detached houses"],
+      // "semi-detached-houses": data[i]["Semi-detached houses"],
+      // "terraced-houses": data[i]["Terraced houses"],
+      // "flats-and-maisonettes": data[i]["Flats and maisonettes"]
     });
   }
 

@@ -9,7 +9,7 @@ describe('dataUtilities', () => {
   });
 
   it('getMaxOfData returns the max value of every object in the array', () => {
-    expect(dataUtilities.getMaxOfData(processedData)).to.equal(2);
+    expect(dataUtilities.getMaxOfData(processedData)).to.equal(0.26);
   });
 
   it('processRawData should take a JSON and convert it into an array of objects', () => {

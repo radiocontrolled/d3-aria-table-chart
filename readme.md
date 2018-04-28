@@ -12,5 +12,8 @@ Requires Node v8.
 `npm run build`
 http://localhost:8080/public/index.html
 
+# Test
+`npm run test`
+
 # Data 
 Source: http://landregistry.data.gov.uk/
