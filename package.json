@@ -1,12 +1,12 @@
 {
   "name": "a11y-chart-2",
   "version": "1.0.1",
-  "main": "server.js",
   "scripts": {
     "sass": "node-sass --output-style compact src/scss/style.scss public/css/style.css",
     "lint": "eslint src/js chart.js",
     "test": "mocha test/*.spec.js",
-    "build": "webpack"
+    "build": "webpack",
+    "start:dev": "webpack-dev-server"
   },
   "author": "Alison Benjamin",
   "license": "ISC",
@@ -30,6 +30,8 @@
     "node-sass": "^4.5.3",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
-    "webpack": "^3.8.1"
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
   }
 }
