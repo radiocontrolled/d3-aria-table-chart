@@ -8,13 +8,15 @@ https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts#id384_tables
 
 3. Chart does not work in IE11
 
-4. Heading should not be heading level 2
+~~4. Heading should not be heading level 2~~
 
 5. What's the difference between colheader & tableheader? How do the ARIA roles map to the normal HTML semantics?
 
-6. Add a table.
+~~6. Add a table.~~
 
-7. Add 'per cent change' to the path title, for greater usability?
+7. ~~Add 'per cent change' to the path title, for greater usability~~
 
 8. What is the meaning behind "graphic graphic"
 
+# Version 2
+- Replace `use` with `circle` element 

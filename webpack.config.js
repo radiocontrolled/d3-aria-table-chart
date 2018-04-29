@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   watch: true,
-  entry: './src/js/chart.js',
+  entry: ['babel-polyfill', './src/js/chart.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve('public/js/')

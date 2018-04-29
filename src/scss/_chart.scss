@@ -2,6 +2,10 @@
 	svg {
 		.canvas {
 			border: 1px solid $grey;
+      
+      circle {
+        fill: $all;
+      }
 
       path.line {
         fill: none;

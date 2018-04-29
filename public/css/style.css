@@ -1,5 +1,7 @@
 .chart svg .canvas { border: 1px solid #ecf0f1; }
 
+.chart svg .canvas circle { fill: #f39c12; }
+
 .chart svg .canvas path.line { fill: none; stroke-width: 1.5; stroke-linecap: round; shape-rendering: auto; }
 
 .chart svg .canvas path.line.all-property-types { stroke: #f39c12; }
@@ -23,9 +25,3 @@ body .nav a { color: #ecf0f1; font-weight: bold; }
 body .nav a.active { color: white; }
 
 body .container { margin: 0 auto; width: 100%; padding-top: 1em; }
-
-body .container .alert-primary { background: #2ecc71; color: white; border: none; }
-
-body .container .alert-primary a { text-decoration: underline; font-weight: bold; color: white; }
-
-body .container .btn-primary { background: #1abc9c; border: none; color: white; }

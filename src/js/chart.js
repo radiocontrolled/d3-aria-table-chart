@@ -139,7 +139,7 @@ class Chart extends Canvas {
   }
 
   drawLine(data, lineGenerator, className) {
-    const title = className.replace(/\-/g, " ");
+    const title = `Per cent change, ${className.replace(/\-/g, " ")}`;
 
     this.table
       .append('g')
@@ -166,7 +166,11 @@ class Chart extends Canvas {
       .enter()
       .append('g')
       .attr('role', 'cell')
-      .append('use')
+      .append('circle')
+      .attr('r', 3)
+      .attr('cx', (d) => this.xScale(d.date))
+      .attr('cy', (d) => this.yScale(d['all-property-types']))
+      .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .attr('class', className)
       .attr('role', 'img')
       .append('title')
