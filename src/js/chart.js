@@ -17,7 +17,9 @@ class Canvas {
     this.svg = select(this.parentDiv)
       .append('svg')
       .attr('width', this.width)
-      .attr('height', this.height);
+      .attr('height', this.height)
+      .attr('role', 'img')
+      .attr('aria-labelledby', 'title desc');
 
     this.title = this.svg
       .append('title')
@@ -25,7 +27,7 @@ class Canvas {
 
     this.desc = this.svg
       .append('desc')
-      .text('Line chart demonstrating all property types monthly percentage change');
+      .text('A line chart demonstrating all property types\' monthly percentage change in prices in 2017');
 
     // position g inside of SVG
     this.canvas = this.svg

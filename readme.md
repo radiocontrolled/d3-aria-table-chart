@@ -17,3 +17,17 @@ http://localhost:8080/public/index.html
 
 # Data 
 Source: http://landregistry.data.gov.uk/
+
+# a11y features
+- Inline SVG (when the SVG is in the HTML) means SVG source is directly available in the DOM - which is exposed to the accessibility API that is used by AT.
+- Putting `role="img"` on the svg element ensures it is identified as a graphic. 
+- Using `aria-labelledby` referencing the id values of the `title` and `desc` elements provides the accessible name and accessible description. This is because `title` and `desc` support may be patchy in screen readers
+
+LEFT OFF: 
+https://www.w3.org/TR/SVG11/access.html#SVGAccessibilityGuidelines
+https://www.w3.org/TR/2000/NOTE-SVG-access-20000807/
+https://www.w3.org/TR/SVG11/struct.html#DescriptionAndTitleElements
+
+Sources: 
+https://developer.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/
+
