@@ -1,10 +1,10 @@
 .chart svg .canvas { border: 1px solid #ecf0f1; }
 
-.chart svg .canvas circle { fill: #f39c12; }
+.chart svg .canvas circle { fill: #8E44AD; }
 
 .chart svg .canvas path.line { fill: none; stroke-width: 1.5; stroke-linecap: round; shape-rendering: auto; }
 
-.chart svg .canvas path.line.all-property-types { stroke: #f39c12; }
+.chart svg .canvas path.line.all-property-types { stroke: #8E44AD; }
 
 .chart svg .canvas path.line.detached-houses { stroke: #27ae60; }
 

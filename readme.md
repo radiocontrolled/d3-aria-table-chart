@@ -31,3 +31,5 @@ https://www.w3.org/TR/SVG11/struct.html#DescriptionAndTitleElements
 Sources: 
 https://developer.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/
 
+TO DO: -- change line colour and do standard a11y assessment
+TO do: -- add caveat that this is a pres about technical accessibility
