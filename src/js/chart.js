@@ -89,9 +89,8 @@ class Chart extends Canvas {
       .domain([this.data[0].date, this.data[this.data.length - 1].date])
       .range([this.margins.left, this.width - this.margins.right]);
 
-    this.xAxis = axisBottom(this.xScale)
-      .tickFormat(timeFormat('%b'))
-      .ticks(this.data.length);
+    this.xAxis = axisBottom(this.xScale);
+
 
     this.table
       .append('g')
@@ -99,6 +98,11 @@ class Chart extends Canvas {
       .attr('class', 'x axis')
       .call(this.xAxis)
       .attr('transform', `translate(0, ${this.height - this.margins.bottom - this.margins.top})`);
+
+    // manually select to create first January ---
+    // for some reason d3 v4 doesn't want to give me the first tick
+    // a first columnheader is required for the first month
+    select('.x.axis').insert('text', 'path').text('January').attr('role', 'columnheader');
 
     // add extra a11y attributes to row
     this.xAxisA11yAttribs = selectAll('.x.axis .tick text')
@@ -167,7 +171,8 @@ class Chart extends Canvas {
       .data(data)
       .enter()
       .append('g')
-      .attr('role', 'cell')
+      .attr('role', 'presentation')
+      // .attr('role', 'cell')
       .append('circle')
       .attr('r', 3)
       .attr('cx', (d) => this.xScale(d.date))

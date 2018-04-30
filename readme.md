@@ -28,8 +28,13 @@ https://www.w3.org/TR/SVG11/access.html#SVGAccessibilityGuidelines
 https://www.w3.org/TR/2000/NOTE-SVG-access-20000807/
 https://www.w3.org/TR/SVG11/struct.html#DescriptionAndTitleElements
 
-Sources: 
-https://developer.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/
+to test with Catherine: 
+- does role="presentation" affect anything? (try it toggled on / off)
+- is reading of tabular data correct?
+- could she do the live screen reader demo?
 
-TO DO: -- change line colour and do standard a11y assessment
+Sources: 
+  
+
+TO DO: -- standard a11y assessment
 TO do: -- add caveat that this is a pres about technical accessibility

@@ -19,4 +19,7 @@ https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts#id384_tables
 8. What is the meaning behind "graphic graphic"
 
 # Version 2
-- Replace `use` with `circle` element 
+- Replace `use` with `circle` element
+
+Testing round 2
+Jan needs to be labelled.
