@@ -158,7 +158,7 @@ class Chart extends Canvas {
       .attr('role', 'row') // g to append dots
       .attr('class', `${className}`)
       .append('g')
-      .attr('role', 'rowheader')
+      // .attr('role', 'rowheader') is this the missing thing
       .append('path')
       // .attr('role', 'img') // needed?
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
