@@ -45,7 +45,7 @@ class Canvas {
       .append('g')
       .attr('role', 'table')
       // change this to reference a const at some point //
-      .attr('aria-label', 'I am the aria label');
+      .attr('aria-label', 'I am the aria label ');
 
   }
 
