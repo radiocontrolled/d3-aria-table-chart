@@ -164,9 +164,9 @@ class Chart extends Canvas {
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .data([data])
       .attr("d", lineGenerator)
-      .attr('class', `line ${className}`)
-      .append('title')
-      .text(`${title}`);
+      .attr('class', `line ${className}`);
+      //.append('title')
+      //.text(`${title}`); deleted for usability
   }
 
   drawLineData(data, className) {
