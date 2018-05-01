@@ -18,15 +18,19 @@ class Canvas {
       .append('svg')
       .attr('width', this.width)
       .attr('height', this.height)
-      .attr('role', 'img')
-      .attr('aria-labelledby', 'title desc');
+      .attr('role', 'img');
+      //.attr('aria-labelledby', 'title desc');
 
     this.title = this.svg
       .append('title')
+      .attr('aria-hidden', true)
+      .attr('id', 'titleId')
       .text('Monthly percentage change in UK house prices, 2017');
 
     this.desc = this.svg
       .append('desc')
+      .attr('aria-hidden', true)
+
       .text('A line chart demonstrating all property types\' monthly percentage change in prices in 2017');
 
     // position g inside of SVG
@@ -39,7 +43,8 @@ class Canvas {
 
     this.table = this.canvas
       .append('g')
-      .attr('role', 'table');
+      .attr('role', 'table')
+      .attr('aria-describedby', 'titleId');
 
   }
 
