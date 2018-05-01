@@ -23,3 +23,6 @@ https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts#id384_tables
 
 Testing round 2
 Jan needs to be labelled.
+
+Testing round 3
+- character encoding for &#45;
