@@ -44,7 +44,8 @@ class Canvas {
     this.table = this.canvas
       .append('g')
       .attr('role', 'table')
-      .attr('aria-describedby', 'titleId');
+      // change this to reference a const at some point
+      .attr('aria-label', 'Monthly percentage change in UK house prices, 2017');
 
   }
 
