@@ -184,7 +184,6 @@ class Chart extends Canvas {
       .attr('cy', (d) => this.yScale(d['all-property-types']))
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .attr('class', className)
-      .attr('role', 'img')
       .append('title')
       .text((d) => d['all-property-types']);
   }
