@@ -177,7 +177,6 @@ class Chart extends Canvas {
       .data(data)
       .enter()
       .append('g')
-      //  .attr('role', 'presentation')
       // .attr('role', 'cell')
       .append('circle')
       .attr('r', 3)
