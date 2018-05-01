@@ -25,3 +25,5 @@ body .nav a { color: #ecf0f1; font-weight: bold; }
 body .nav a.active { color: white; }
 
 body .container { margin: 0 auto; width: 100%; padding-top: 1em; }
+
+body caption { color: #212529; }

@@ -154,7 +154,7 @@ class Chart extends Canvas {
       .append('g')
       .attr('role', 'rowheader')
       .append('path')
-      .attr('role', 'img')
+      .attr('role', 'img') // needed?
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .data([data])
       .attr("d", lineGenerator)
