@@ -17,8 +17,8 @@ class Canvas {
     this.svg = select(this.parentDiv)
       .append('svg')
       .attr('width', this.width)
-      .attr('height', this.height)
-      .attr('role', 'img');
+      .attr('height', this.height);
+      //.attr('role', 'img'); // we're pretending this is a table
       //.attr('aria-labelledby', 'title desc');
 
     this.title = this.svg
