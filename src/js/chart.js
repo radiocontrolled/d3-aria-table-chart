@@ -45,7 +45,7 @@ class Canvas {
       .append('g')
       .attr('role', 'table')
       // change this to reference a const at some point //
-      .attr('aria-label', 'I am the aria label ');
+      .attr('aria-label', 'I am the aria label describing the d3 Chart, monthly percentage change in UK house prices, 2017. ');
 
   }
 
@@ -158,15 +158,11 @@ class Chart extends Canvas {
       .attr('role', 'row') // g to append dots
       .attr('class', `${className}`)
       .append('g')
-      // .attr('role', 'rowheader') is this the missing thing
       .append('path')
-      // .attr('role', 'img') // needed?
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .data([data])
       .attr("d", lineGenerator)
       .attr('class', `line ${className}`);
-      //.append('title')
-      //.text(`${title}`); deleted for usability
   }
 
   drawLineData(data, className) {

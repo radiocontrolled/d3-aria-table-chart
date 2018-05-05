@@ -16,7 +16,13 @@
 
 body { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; }
 
-body h1 { font-size: 1.5em; }
+body h1 { font-size: 1.2em; font-weight: bold; }
+
+body h2 { font-size: 1em; font-weight: bold; }
+
+body .table { padding-top: 1em; }
+
+body table { font-size: 0.8em; }
 
 body .nav { background: #34495E; padding: 0.5em; }
 
@@ -26,4 +32,4 @@ body .nav a.active { color: white; }
 
 body .container { margin: 0 auto; width: 100%; padding-top: 1em; }
 
-body caption { color: #212529; }
+body caption { color: #212529; font-style: italic; padding-top: 0; }

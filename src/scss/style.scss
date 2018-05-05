@@ -10,7 +10,21 @@ body {
 
     }
 
-    font-size: 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .table {
+    padding-top: 1em;
+  }
+
+  table {
+    font-size: 0.8em;
   }
 
   .nav {
@@ -35,6 +49,8 @@ body {
 
   caption {
     color: #212529;
+    font-style: italic;
+    padding-top: 0;
   }
 
 
