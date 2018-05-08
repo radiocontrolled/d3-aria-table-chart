@@ -55,7 +55,7 @@ Visual guide to the above features:
 <img src="https://raw.githubusercontent.com/radiocontrolled/benj.info/master/assets/images/ariaRolesAnnotated.png" alt="Visual guide to aria roles applied to demo chart - aria hidden y axis and label, circles as role table cell, x axis with role role and months with role columnheader"/>
 
 
-The demo also features an HTML table with data identical to that included in the chart. This HTML table is a visual aid for AT testing. It also provides an alternative presentation of content to give the user choice in how content is consumed, and for those for whom the chart is not accessible.
+The demo also features an HTML table with data identical to that included in the chart. This HTML table is an aid for AT testing. It also provides an alternative presentation of content to give the user choice in how content is consumed, and for those for whom the chart is not accessible.
 
 **The `table` role:**
 
