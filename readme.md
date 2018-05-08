@@ -37,7 +37,7 @@ Visit http://localhost:8080/public/index.html
 `npm run test`
 
 ### Data 
-The chart in this demo depicts the monthly change in house prices in across the UK in 2017. Data for the demo chart was downloaded from the <a href="http://landregistry.data.gov.uk/">HM Land Registry</a> Website in March 2018.
+The chart in this demo depicts the monthly change in house prices in across the UK in 2017. Data for the demo chart were downloaded from the <a href="http://landregistry.data.gov.uk/">HM Land Registry</a> Website in March 2018.
 
 
 ## Demo accessibility features
