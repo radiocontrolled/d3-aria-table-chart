@@ -95,12 +95,33 @@ The columnheader establishes a relationship between it and all cells in the corr
   </g>
 ```
 
+## Accessibility, News and You checklist (Developers)
+
+Source: https://bbc-news.github.io/accessibility-news-and-you/accessibility-news-and-developers
+
+
+| Item| Result    | 
+| :--------------------------------- |:------------|
+|Has there been an Accessibility Review for the product feature. Colour contrast?|N/A, and colour of line is `#8E44AD`; which is WCAG AA|
+|Does the design use icons|N/A|
+|Consider the mark up|Code validated with https://validator.w3.org/|
+|Use a linting tool with accessibility rules|to-do|
+|Check the accessibility of the rendered DOM|Axe recommends manual color contrast checking (DONE)|
+|Turn CSS off in the browser|SVG chart works without CSS |
+|Page without JavaScript|Not implemented in this project, but if the D3 was rendered server-side, the chart would work with JavaScript turned off|
+|Keyboard navigation |There are no links, there is no interactivity|
+|o you need to use ARIA|See project readme for ARIA table semantics explanation; ARIA `main` landmark role added|
+|Use VoiceOver (Screen Reader) on iOS (iPhone/iPad)|to-do|
+|Manually check the heading orde|DONE|
+|Colour blindness|to-do - ARIA errors with Chrome lens|
+
 
 ## Assistive technology support
 
 P1 testing is a work in progress and follows https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology 
 
 ###P1
+
 |AT|Result (work in progress)|
 |:--|:--|
 |JAWS Version 17 With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Screen Reader)|JAWS identifies the chart as a table and the table can be navigated uing JAWS' table commands.|
@@ -113,6 +134,7 @@ P1 testing is a work in progress and follows https://bbc-news.github.io/accessib
 TBD
 
 ###P3
+
 |AT|Result (work in progress)|
 |:--|:--|
 |VoiceOver OS (Mac) (Latest Version) With Safari (Latest Version) on Mac OS (Latest Version) (Screen Reader)|`VO`-`A` will read the entire chart as if it were a table and ignore `aria-hidden` elements; VO table commands (described in https://www.apple.com/voiceover/info/guide/_1131.html) appear to work, but , VO can give focus to `aria-hidden` elements|
