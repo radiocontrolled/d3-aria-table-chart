@@ -13,6 +13,9 @@ class Canvas {
     this.parentDiv = parentDiv;
     this.setCanvasDimensions();
 
+    // WCAG AA against white background
+    this.purple = '#8E44AD';
+
     // set width of SVG
     this.svg = select(this.parentDiv)
       .append('svg')
@@ -155,14 +158,22 @@ class Chart extends Canvas {
 
     this.table
       .append('g')
-      .attr('role', 'row') // g to append dots
+      .attr('role', 'row')
       .attr('class', `${className}`)
       .append('g')
       .append('path')
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .data([data])
       .attr("d", lineGenerator)
-      .attr('class', `line ${className}`);
+      .attr('class', `line ${className}`)
+      /* adding style for the line here with JavaScript
+      because if the user has disabled CSS, we want the line to look like a line*/
+      .attr('fill', 'none')
+      .attr('stroke-width', 1.5)
+      .attr('stroke-linecap', 'round')
+      .attr('shape-rendering', 'auto')
+      .attr('stroke', this.purple);
+
   }
 
   drawLineData(data, className) {
@@ -178,6 +189,7 @@ class Chart extends Canvas {
       .attr('r', 3)
       .attr('cx', (d) => this.xScale(d.date))
       .attr('cy', (d) => this.yScale(d['all-property-types']))
+      .attr('fill', this.purple)
       .attr('transform', `translate(0, ${-this.margins.bottom})`)
       .attr('class', className)
       .append('title')

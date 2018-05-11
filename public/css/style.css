@@ -2,18 +2,6 @@
 
 .chart svg .canvas circle { fill: #8E44AD; }
 
-.chart svg .canvas path.line { fill: none; stroke-width: 1.5; stroke-linecap: round; shape-rendering: auto; }
-
-.chart svg .canvas path.line.all-property-types { stroke: #8E44AD; }
-
-.chart svg .canvas path.line.detached-houses { stroke: #27ae60; }
-
-.chart svg .canvas path.line.semi-detached-houses { stroke: #2980b9; }
-
-.chart svg .canvas path.line.terraced-houses { stroke: #8e44ad; }
-
-.chart svg .canvas path.line.flats-and-maisonettes { stroke: #2c3e50; }
-
 body { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; }
 
 body h1 { font-size: 1.2em; font-weight: bold; }
