@@ -100,14 +100,23 @@ The columnheader establishes a relationship between it and all cells in the corr
 
 P1 testing is a work in progress and follows https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology 
 
+###P1
 |AT|Result (work in progress)|
 |:--|:--|
 |JAWS Version 17 With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Screen Reader)|JAWS identifies the chart as a table and the table can be navigated uing JAWS' table commands.|
-|ZoomText Magnifier/Reader Latest Version With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Screen Magnifier with Screen Reader capabilities)
-||
+|ZoomText Magnifier/Reader Latest Version With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Screen Magnifier with Screen Reader capabilities)||
 |Dragon Naturallyspeaking Version 13 With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Speech Recognition)||
 |Read&Write Latest Version With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Reading Solution)||
 |VoiceOver iOS (iPhone/iPad) Latest Version With Safari(Latest Version) on iOS (Latest Version)(Screen Reader)||
+
+###P2
+TBD
+
+###P3
+|AT|Result (work in progress)|
+|:--|:--|
+|VoiceOver OS (Mac) (Latest Version) With Safari (Latest Version) on Mac OS (Latest Version) (Screen Reader)|`VO`-`A` will read the entire chart as if it were a table and ignore `aria-hidden` elements; VO table commands (described in https://www.apple.com/voiceover/info/guide/_1131.html) appear to work, but , VO can give focus to `aria-hidden` elements|
+
 
 ## Useful links
 *  https://www.w3.org/TR/SVG11/access.html#SVGAccessibilityGuidelines 
