@@ -4,40 +4,40 @@
 			border: 1px solid $grey;
 
       // ------------
-      // styles are moved to chart.js, so that when the user
+      // styles are also in chart.js, so that when the user
       // turns CSS off, the line and circle will still look appropriate
       //
 
-      // circle {
-      //   fill: $all;
-      // }
-      //
-      // path.line {
-      //   fill: none;
-      //   stroke-width: 1.5;
-      //   stroke-linecap: round;
-      //   shape-rendering: auto;
+      circle {
+        fill: $all;
+      }
 
-      //   &.all-property-types {
-      //     stroke: $all;
-      //   }
+      path.line {
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        shape-rendering: auto;
 
-      //   &.detached-houses {
-      //     stroke: $detachedHouses;
-      //   }
+        &.all-property-types {
+          stroke: $all;
+        }
 
-      //   &.semi-detached-houses {
-      //     stroke: $semiDetachedHouses;
-      //   }
+        &.detached-houses {
+          stroke: $detachedHouses;
+        }
 
-      //   &.terraced-houses {
-      //     stroke: $terracedHouses;
-      //   }
+        &.semi-detached-houses {
+          stroke: $semiDetachedHouses;
+        }
 
-      //   &.flats-and-maisonettes {
-      //     stroke: $flatsAndMaisonettes;
-      //   }
-      // }
+        &.terraced-houses {
+          stroke: $terracedHouses;
+        }
+
+        &.flats-and-maisonettes {
+          stroke: $flatsAndMaisonettes;
+        }
+      }
 		}
 	}
 }
