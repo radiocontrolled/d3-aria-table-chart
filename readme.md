@@ -49,6 +49,7 @@ The chart in this demo depicts the monthly change in house prices in across the 
 |chart with `aria-hidden` y axis| The axes on this chart are built by a combination of D3 features: d3-scale, d3-axis and d3-time-format. The axes are grouped compositions of `<line>` and `<text>` elements. JAWS will recognise and read `<text>` elements, therefore, the y-axis is `aria-hidden` so that it will not be announced by this AT. |
 |chart with `aria-hidden` y axis label| As above, this is `aria-hidden` so that it will not be announced by this AT.|
 |chart using `role="table"` and associated table semantics| As it is not possible to use the native HTML `table` within SVG, an ARIA `role="table"` is used. An [ARIA table](https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/#table) is "a static tabular structure containing one or more rows that each contain one or more cells". d3's x axis is given `role="row"` and its inner `<text>` months given `role="columnheader"`. A `columnheader` is the structural equivalent to an HTML `th` with a column scope; and a `columnheader` needs to be nested within a `row`.| 
+|ARIA `main` landmark role|Each page should have one `main` landmark|
 |Progressively enhanced CSS|Line / circle styles are inline so that when CSS is turned off, the chart still displays properly|
 
 Visual guide to the above features: 
@@ -110,17 +111,21 @@ Source: https://bbc-news.github.io/accessibility-news-and-you/accessibility-news
 |Turn CSS off in the browser|SVG chart works without CSS |
 |Page without JavaScript|Not implemented in this project, but if the D3 was rendered server-side, the chart would work with JavaScript turned off|
 |Keyboard navigation |There are no links, there is no interactivity|
-|o you need to use ARIA|See project readme for ARIA table semantics explanation; ARIA `main` landmark role added|
+|o you need to use ARIA|See https://github.com/radiocontrolled/d3-aria-table-chart#demo-accessibility-features |
 |Use VoiceOver (Screen Reader) on iOS (iPhone/iPad)|to-do|
 |Manually check the heading orde|DONE|
 |Colour blindness|to-do - ARIA errors with Chrome lens|
+|Specifically check your code for errors against BBC Accessibility Standards|to-do|
+|Test with Assistive Technology that we support|See https://github.com/radiocontrolled/d3-aria-table-chart#assistive-technology-support|
+|Automated testing with SHIVE|to-do|
+|Have End to End Tests been written to cover accessibility|N/A|
 
 
 ## Assistive technology support
 
-P1 testing is a work in progress and follows https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology 
+Work in progress and follows https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology 
 
-###P1
+### P1
 
 |AT|Result (work in progress)|
 |:--|:--|
@@ -130,10 +135,10 @@ P1 testing is a work in progress and follows https://bbc-news.github.io/accessib
 |Read&Write Latest Version With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Reading Solution)||
 |VoiceOver iOS (iPhone/iPad) Latest Version With Safari(Latest Version) on iOS (Latest Version)(Screen Reader)||
 
-###P2
+### P2
 TBD
 
-###P3
+### P3
 
 |AT|Result (work in progress)|
 |:--|:--|
@@ -141,10 +146,11 @@ TBD
 
 
 ## Useful links
+*  https://tink.uk/accessible-svg-line-graphs/
 *  https://www.w3.org/TR/SVG11/access.html#SVGAccessibilityGuidelines 
 *  https://www.w3.org/TR/2000/NOTE-SVG-access-20000807/ 
 *  https://www.w3.org/TR/SVG11/struct.html#DescriptionAndTitleElements
-*  https://tink.uk/accessible-svg-line-graphs/
+
 
 
 
