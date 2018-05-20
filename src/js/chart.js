@@ -77,7 +77,7 @@ class Canvas {
     this.canvas
       .attr('width', this.width - this.margins.right - this.margins.left)
       .attr('height', this.height - this.margins.top - this.margins.bottom)
-      .attr('transform', `translate(${this.margins.left}, ${this.margins.top})`);
+      .attr('transform', `translate(0, ${this.margins.top})`);
   }
 }
 
@@ -148,7 +148,7 @@ class Chart extends Canvas {
         .y((d) => this.yScale(d[el]));
 
       this.drawLine(this.data, lineGenerator, el);
-      this.drawLineData(this.data, el);
+      this.drawCircleData(this.data, el);
 
     });
   }
@@ -176,7 +176,7 @@ class Chart extends Canvas {
 
   }
 
-  drawLineData(data, className) {
+  drawCircleData(data, className) {
     const parent = select(`.${className}`);
     const formatter = timeFormat('%b');
 
@@ -208,6 +208,15 @@ class Chart extends Canvas {
       .attr("d", lineGenerator);
   }
 
+  // refactor into more generic
+  resizeCircles() {
+    selectAll('circle.all-property-types')
+      .attr('cx', (d) => this.xScale(d.date))
+      .attr('cy', (d) => this.yScale(d['all-property-types']))
+      .attr('transform', `translate(0, ${-this.margins.bottom})`);
+  }
+
+
   resizeChartComponents() {
     this.xScale
       .range([this.margins.left, this.width - this.margins.right]);
@@ -223,7 +232,6 @@ class Chart extends Canvas {
       .x((d) => this.xScale(d.date))
       .y((d) => this.yScale(d[el]));
 
-
     select('.y.axis')
       .call(this.yAxis)
       .attr('transform', `translate(${this.margins.left}, ${-this.margins.bottom})`);
@@ -231,6 +239,9 @@ class Chart extends Canvas {
     dataUtilities.getCategoriesToVisualise(this.data, 'date').forEach((el) => {
       this.resizeLine(el);
     });
+
+    this.resizeCircles();
+
   }
 }
 
