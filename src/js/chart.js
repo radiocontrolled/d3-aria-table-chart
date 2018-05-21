@@ -15,14 +15,13 @@ class Canvas {
 
     // WCAG AA against white background
     this.purple = '#8E44AD';
+    this.ariaLabel = 'DEBUG - I am the aria label describing the d3 Chart, monthly percentage change in UK house prices, 2017.';
 
     // set width of SVG
     this.svg = select(this.parentDiv)
       .append('svg')
       .attr('width', this.width)
       .attr('height', this.height);
-      //.attr('role', 'img'); // we're pretending this is a table ///
-      //.attr('aria-labelledby', 'title desc');
 
     this.title = this.svg
       .append('title')
@@ -33,8 +32,7 @@ class Canvas {
     this.desc = this.svg
       .append('desc')
       .attr('aria-hidden', true)
-
-      .text('A line chart demonstrating all property types\' monthly percentage change in prices in 2017');
+      .text('All property types\' monthly percentage change in prices in 2017');
 
     // position g inside of SVG
     this.canvas = this.svg
@@ -47,8 +45,7 @@ class Canvas {
     this.table = this.canvas
       .append('g')
       .attr('role', 'table')
-      // change this to reference a const at some point //
-      .attr('aria-label', 'I am the aria label describing the d3 Chart, monthly percentage change in UK house prices, 2017. ');
+      .attr('aria-label', this.ariaLabel);
 
   }
 
@@ -107,6 +104,8 @@ class Chart extends Canvas {
       .attr('class', 'x axis')
       .call(this.xAxis)
       .attr('transform', `translate(0, ${this.height - this.margins.bottom - this.margins.top})`);
+
+
 
     // manually select to create first January ---
     // for some reason d3 v4 doesn't want to give me the first tick
