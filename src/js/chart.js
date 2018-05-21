@@ -185,6 +185,8 @@ class Chart extends Canvas {
       .append('g')
       .attr('role', 'cell')
       .append('circle')
+      .attr('role', 'text')
+      .attr('aria-label', (d) => `${d['all-property-types']}`)
       .attr('r', 3)
       .attr('cx', (d) => this.xScale(d.date))
       .attr('cy', (d) => this.yScale(d['all-property-types']))
