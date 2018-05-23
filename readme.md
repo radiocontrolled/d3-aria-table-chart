@@ -8,7 +8,7 @@ D3 is an important tool for building chart visualisations. BBC News audiences in
 
 D3 builds charts with SVG, and scalability is an intrinsic accessibility feature of SVG. In addition, SVG has built-in semantic elements and can be enhanced with ARIA. 
 
-The accessibility of D3 charts need not be limited to scalability, descriptions and core content messages. In 2017, [Leonie Watson demonstrated how ARIA table semantics could be applied to an SVG line graph](https://tink.uk/accessible-svg-line-graphs/). 
+The accessibility of D3 charts need not be limited to scalability, titles and descriptions. In 2017, [Leonie Watson demonstrated how ARIA table semantics could be applied to an SVG line graph](https://tink.uk/accessible-svg-line-graphs/). 
 
 In this project I extend Leonie's work by demonstrating how the ARIA table semantics technique can be implemented in a line chart built with D3. I draw on lessons learned in the course of testing various charts produced for BBC Visual Journalism and through testing against BBC News' in-house guidelines, <a href="https://bbc-news.github.io/accessibility-news-and-you/accessibility-news-and-developers">Accessibility, News and Devleopers</a>.
 
