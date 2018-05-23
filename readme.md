@@ -142,7 +142,7 @@ TBD
 
 |AT|Result (work in progress)|
 |:--|:--|
-|VoiceOver OS (Mac) (Latest Version) With Safari (Latest Version) on Mac OS (Latest Version) (Screen Reader)|`VO`-`A` will read the entire chart as if it were a table and ignore `aria-hidden` elements; VO table commands (described in https://www.apple.com/voiceover/info/guide/_1131.html) appear to work, but , VO can give focus to `aria-hidden` elements|
+|VoiceOver OS (Mac) (Latest Version) With Safari (Latest Version) on Mac OS (Latest Version) (Screen Reader)|`VO`-`A` will read the entire chart as if it were a table and ignore `aria-hidden` elements; VO table commands (described in https://www.apple.com/voiceover/info/guide/_1131.html) work. Oddly? - VO can give focus to `aria-hidden` elements, and negative and decimal values seem not to be announced as such|
 
 
 ## Useful links
