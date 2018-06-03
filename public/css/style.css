@@ -20,6 +20,8 @@ body h1 { font-size: 1.2em; font-weight: bold; }
 
 body h2 { font-size: 1em; font-weight: bold; }
 
+body a { text-decoration: underline; }
+
 body .table { padding-top: 1em; }
 
 body table { font-size: 0.8em; }
