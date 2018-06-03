@@ -21,6 +21,9 @@ body {
 
   a {
     text-decoration: underline;
+    &:focus {
+      color: #0056b3;
+    }
   }
 
   .table {
