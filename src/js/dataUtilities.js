@@ -1,3 +1,14 @@
+// hack for aria-labels only
+// ensure negative aria-labels inside SVG are read by VoiceOver
+const ariaLabelNegativeFormat = (number) => {
+  const regExp = /^-/;
+  const encoding = 'minus ';
+  if (number < 0) {
+    const str = `${encoding}${number.toString().split(regExp)[1]}`;
+    return str;
+  } return number;
+};
+
 const getMaxOfData = (data) => {
   const arr = data.map((el) => {
     const innerArr = [];
@@ -22,7 +33,6 @@ const getData = (path) => {
     });
   });
 };
-
 
 const processRawData = (data) => {
   let arr = [];
@@ -51,8 +61,9 @@ const getCategoriesToVisualise = (arrayOfObjects, objectPropertyToFilter) => {
 };
 
 module.exports = {
-  getCategoriesToVisualise: getCategoriesToVisualise,
-  processRawData: processRawData,
-  getData: getData,
-  getMaxOfData: getMaxOfData
+  getCategoriesToVisualise,
+  processRawData,
+  getData,
+  getMaxOfData,
+  ariaLabelNegativeFormat
 };

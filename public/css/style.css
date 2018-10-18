@@ -37,3 +37,5 @@ body .nav a.active { color: white; }
 body .container { margin: 0 auto; width: 100%; padding-top: 1em; }
 
 body caption { color: #212529; font-style: italic; padding-top: 0; }
+
+body .source { font-size: 0.8em; padding-top: 0.5em; }
