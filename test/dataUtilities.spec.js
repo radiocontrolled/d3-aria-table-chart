@@ -16,4 +16,10 @@ describe('dataUtilities', () => {
     expect(dataUtilities.processRawData(json)).to.deep.equal(processedData);
     expect(dataUtilities.processRawData(json)).to.have.lengthOf(2);
   });
+  it('ariaLabelNegativeFormat formats negative aria labels using plaintext', () => {
+    expect(dataUtilities.ariaLabelNegativeFormat(-0.12)).to.equal('minus 0.12');
+    expect(dataUtilities.ariaLabelNegativeFormat(0)).to.equal(0);
+    expect(dataUtilities.ariaLabelNegativeFormat(1.23)).to.equal(1.23);
+  });
 });
+

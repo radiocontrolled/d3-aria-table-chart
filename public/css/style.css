@@ -20,6 +20,10 @@ body h1 { font-size: 1.2em; font-weight: bold; }
 
 body h2 { font-size: 1em; font-weight: bold; }
 
+body a { text-decoration: underline; }
+
+body a:focus { color: #0056b3; }
+
 body .table { padding-top: 1em; }
 
 body table { font-size: 0.8em; }
@@ -33,3 +37,5 @@ body .nav a.active { color: white; }
 body .container { margin: 0 auto; width: 100%; padding-top: 1em; }
 
 body caption { color: #212529; font-style: italic; padding-top: 0; }
+
+body .source { font-size: 0.8em; padding-top: 0.5em; }

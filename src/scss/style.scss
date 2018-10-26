@@ -19,6 +19,13 @@ body {
     font-weight: bold;
   }
 
+  a {
+    text-decoration: underline;
+    &:focus {
+      color: #0056b3;
+    }
+  }
+
   .table {
     padding-top: 1em;
   }
@@ -53,5 +60,8 @@ body {
     padding-top: 0;
   }
 
-
+  .source {
+    font-size: 0.8em;
+    padding-top: 0.5em;
+  }
 }

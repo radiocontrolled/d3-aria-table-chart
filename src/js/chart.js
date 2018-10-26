@@ -6,7 +6,7 @@ import {select, selectAll} from 'd3-selection';
 import {line} from 'd3-shape';
 
 /*
-  SVG canvas
+  SVG 
 */
 class Canvas {
   constructor(parentDiv) {
@@ -14,8 +14,9 @@ class Canvas {
     this.setCanvasDimensions();
 
     // WCAG AA against white background
+
     this.purple = '#8E44AD';
-    this.ariaLabel = 'DEBUG - I am the aria label describing the d3 Chart, monthly percentage change in UK house prices, 2017.';
+    this.ariaLabel = 'Monthly percentage change in UK house prices, 2017.';
 
     // set width of SVG
     this.svg = select(this.parentDiv)
@@ -46,7 +47,6 @@ class Canvas {
       .append('g')
       .attr('role', 'table')
       .attr('aria-label', this.ariaLabel);
-
   }
 
   setCanvasDimensions() {
@@ -63,7 +63,6 @@ class Canvas {
     } else {
       this.height = this.width / 3;
     }
-
   }
 
   updateCanvasDimensions() {
@@ -108,8 +107,7 @@ class Chart extends Canvas {
 
 
     // manually select to create first January ---
-    // for some reason d3 v4 doesn't want to give me the first tick
-    // a first columnheader is required for the first month
+    // a first columnheader is required for the first month for accessibility
     select('.x.axis').insert('text', 'path').text('January').attr('role', 'columnheader');
 
     // add extra a11y attributes to row
@@ -138,7 +136,6 @@ class Chart extends Canvas {
         .attr('text-anchor', 'end')
         .attr('aria-hidden', true)
         .text('Per cent change');
-
 
     // for each category, draw a line -----
     dataUtilities.getCategoriesToVisualise(this.data, 'date').forEach((el) => {
@@ -186,7 +183,7 @@ class Chart extends Canvas {
       .attr('role', 'cell')
       .append('circle')
       .attr('role', 'text')
-      .attr('aria-label', (d) => `${d['all-property-types']}`)
+      .attr('aria-label', (d) => `${dataUtilities.ariaLabelNegativeFormat(d['all-property-types'])}`)
       .attr('r', 3)
       .attr('cx', (d) => this.xScale(d.date))
       .attr('cy', (d) => this.yScale(d['all-property-types']))
