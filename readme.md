@@ -1,21 +1,10 @@
 
 
-# Accessible D3 charts using the ARIA table semantics design pattern
+# A D3 line chart enhanced with ARIA table semantics
 
 **Demo**: https://radiocontrolled.github.io/d3-aria-table-chart/public/index.html
 
-D3 is an important tool for building chart visualisations. BBC News audiences include those who access charts through assistive technology (AT), so the accessibility of its D3 charts to AT users is important.
-
-D3 builds charts with SVG, and scalability is an intrinsic accessibility feature of SVG. In addition, SVG has built-in semantic elements and can be enhanced with ARIA. 
-
-The accessibility of D3 charts need not be limited to scalability, descriptions and core content messages. In 2017, [Leonie Watson demonstrated how ARIA table semantics could be applied to an SVG line graph](https://tink.uk/accessible-svg-line-graphs/). 
-
-In this project I extend Leonie's work by demonstrating how the ARIA table semantics technique can be implemented in a line chart built with D3. I draw on lessons learned in the course of testing various charts produced for BBC Visual Journalism and through testing against BBC News' in-house guidelines, <a href="https://bbc-news.github.io/accessibility-news-and-you/accessibility-news-and-developers">Accessibility, News and Devleopers</a>.
-
-## Future work and caveats
-* ARIA table semantics can be applied to line charts and multi-series line charts. This design patten could also be applicable to bar charts, scatterplots and other visualisation layouts that lend themselves to being described as 'tabular' data.
-
-* user experience should guide this design pattern's use and uptake. More testing, user testing for accessibility/usability and development is needed to refine this design pattern, identify its limitations, and establish browser and AT support (see AT support below)
+D3 builds charts with SVG, and scalability is an intrinsic accessibility feature of SVG. In addition, SVG has built-in elements (`title` and `desc`) that can be enhanced with ARIA. The accessibility of D3 charts need not be limited to scalability, descriptions and core content messages. In 2017, [Leonie Watson demonstrated how ARIA table semantics could be applied to an SVG line graph](https://tink.uk/accessible-svg-line-graphs/). This repo demonstrates how the ARIA table semantics technique can be implemented in a line chart built with D3. 
 
 ## Demo setup
 ### Installation 
@@ -56,94 +45,8 @@ Visual guide to the above features:
 
 <img src="https://raw.githubusercontent.com/radiocontrolled/benj.info/master/assets/images/ariaRolesAnnotated.png" alt="Visual guide to aria roles applied to demo chart - aria hidden y axis and label, circles as role table cell, x axis with role role and months with role columnheader"/>
 
-
-The demo also features an HTML table with data identical to that included in the chart. This HTML table is an aid for AT testing. It also provides an alternative presentation of content to give the user choice in how content is consumed, and for those for whom the chart is not accessible.
-
-**The `table` role:**
-
-A meaningful `aria-label` should be added to the ARIA table.
-
-```
-<g role="table" aria-label="Meaningful lable describing chart should go here">
-  <!-- chart goes here -->
-/g>
-
-```
-
-
-**d3 x axis annotated with ARIA roles:**
-
-The columnheader establishes a relationship between it and all cells in the corresponding column. It is the structural equivalent to an HTML `th` element with a column scope and it must be nested under an element with an ARIA role of `row`.
-
-```
-<g role="row" class="x axis" fill="none" font-size="10" ...>
-  ...
-    <g class="tick" opacity="1" transform="translate(73.14615384615385,0)">
-      <line stroke="#000" y2="6"></line>
-      <text fill="#000" y="9" dy="0.71em" role="columnheader">February</text>
-    </g>
-  ...
-  </g>
-```
-
-**Table cells:**
-
-```
-  <g role="cell">
-    <circle r="3" cx="30" cy="284.5875" transform="translate(0, -30)" class="all-property-types">
-      <title>-0.19</title> 
-    </circle>
-  </g>
-```
-
-## Accessibility, News and You checklist (Developers)
-
-Source: https://bbc-news.github.io/accessibility-news-and-you/accessibility-news-and-developers
-
-
-| Item| Result    | 
-| :--------------------------------- |:------------|
-|Has there been an Accessibility Review for the product feature. Colour contrast?|N/A, and colour of line is `#8E44AD`; which is WCAG AA|
-|Does the design use icons|N/A|
-|Consider the mark up|Code validated with https://validator.w3.org/|
-|Use a linting tool with accessibility rules|to-do|
-|Check the accessibility of the rendered DOM|Axe recommends manual color contrast checking (DONE)|
-|Turn CSS off in the browser|SVG chart works without CSS |
-|Page without JavaScript|Not implemented in this project, but if the D3 was rendered server-side, the chart would work with JavaScript turned off|
-|Keyboard navigation |There are no links, there is no interactivity|
-|o you need to use ARIA|See https://github.com/radiocontrolled/d3-aria-table-chart#demo-accessibility-features |
-|Use VoiceOver (Screen Reader) on iOS (iPhone/iPad)|to-do|
-|Manually check the heading orde|DONE|
-|Colour blindness|to-do - ARIA errors with Chrome lens|
-|Specifically check your code for errors against BBC Accessibility Standards|to-do|
-|Test with Assistive Technology that we support|See https://github.com/radiocontrolled/d3-aria-table-chart#assistive-technology-support|
-|Automated testing with SHIVE|to-do|
-|Have End to End Tests been written to cover accessibility|N/A|
-
-
-## Assistive technology support
-
-Work in progress and follows https://bbc-news.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology 
-
-### P1
-
-|AT|Result (work in progress)|
-|:--|:--|
-|JAWS Version 17 With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Screen Reader)|JAWS identifies the chart as a table and the table can be navigated uing JAWS' table commands.|
-|ZoomText Magnifier/Reader Latest Version With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Screen Magnifier with Screen Reader capabilities)||
-|Dragon Naturallyspeaking Version 13 With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Speech Recognition)||
-|Read&Write Latest Version With Internet Explorer 11 on Windows (XP/Vista/7/8/10)(Reading Solution)||
-|VoiceOver iOS (iPhone/iPad) Latest Version With Safari(Latest Version) on iOS (Latest Version)(Screen Reader)||
-
-### P2
-TBD
-
-### P3
-
-|AT|Result (work in progress)|
-|:--|:--|
-|VoiceOver OS (Mac) (Latest Version) With Safari (Latest Version) on Mac OS (Latest Version) (Screen Reader)|`VO`-`A` will read the entire chart as if it were a table and ignore `aria-hidden` elements; VO table commands (described in https://www.apple.com/voiceover/info/guide/_1131.html) appear to work, but , VO can give focus to `aria-hidden` elements|
-
+## Testing notes
+Tested with VoiceOver (Mac) and JAWS 17 (Windows) on IE. Both AT can control this chart using table commands.
 
 ## Useful links
 *  https://tink.uk/accessible-svg-line-graphs/
